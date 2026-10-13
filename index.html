@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAM211 — Building Agentic Lending Decisions on AWS · Resources</title>
+<style>
+  :root {
+    --navy:#16243E; --blue:#235F9C; --orange:#EC7A11; --ink:#1b2430;
+    --muted:#5b6672; --bg:#f4f6f9; --card:#ffffff; --line:#e3e8ef;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+         background:var(--bg); color:var(--ink); line-height:1.4; }
+  header { background:linear-gradient(135deg,var(--navy),#223b63); color:#fff;
+           padding:28px 24px; }
+  header .kicker { color:var(--orange); font-weight:700; letter-spacing:.08em;
+           font-size:12px; text-transform:uppercase; }
+  header h1 { margin:6px 0 4px; font-size:24px; }
+  header p { margin:0; color:#c7d2e0; font-size:14px; }
+  .wrap { max-width:1080px; margin:0 auto; padding:24px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+          gap:18px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px;
+          padding:18px 18px 8px; box-shadow:0 1px 3px rgba(20,36,62,.06); }
+  .card h2 { margin:0 0 12px; font-size:15px; color:var(--blue);
+             text-transform:uppercase; letter-spacing:.04em; border-bottom:2px solid var(--line);
+             padding-bottom:8px; }
+  a.res { display:block; text-decoration:none; color:inherit; padding:9px 10px;
+          border-radius:9px; margin-bottom:8px; border:1px solid transparent;
+          transition:.15s; }
+  a.res:hover { background:#f0f6ff; border-color:#cfe0f5; }
+  a.res .label { display:block; font-weight:600; font-size:14px; color:var(--navy); }
+  a.res .note { display:block; font-size:12px; color:var(--muted); margin-top:2px; }
+  footer { text-align:center; color:var(--muted); font-size:12px; padding:16px 24px 32px; }
+  @media print { body { background:#fff; } a.res:hover { background:none; } }
+</style>
+</head>
+<body>
+  <header>
+    <div class="kicker">AWS Breakout · SAM211</div>
+    <h1>Building Agentic Lending Decisions on AWS</h1>
+    <p>Resources &amp; references — from the session. Tap any item to open.</p>
+  </header>
+  <div class="wrap">
+    <div class="grid">
+    <section class="card">
+      <h2>Articles &amp; Papers</h2>
+      
+        <a class="res" href="https://developer.nvidia.com/blog/build-your-own-transaction-foundation-model-for-financial-intelligence/" target="_blank" rel="noopener">
+          <span class="label">NVIDIA Blog — Build Your Own Transaction Foundation Model</span>
+          <span class="note">The Phase 2 production recipe</span>
+        </a>
+        <a class="res" href="https://build.nvidia.com/nvidia/build-your-own-transaction-foundation-model" target="_blank" rel="noopener">
+          <span class="label">NVIDIA Runnable Blueprint</span>
+          <span class="note">Launch-it-yourself version</span>
+        </a>
+        <a class="res" href="https://github.com/NVIDIA-AI-Blueprints/transaction-foundation-model" target="_blank" rel="noopener">
+          <span class="label">NVIDIA TFM — GitHub</span>
+          <span class="note">Source code</span>
+        </a>
+        <a class="res" href="https://aws.amazon.com/blogs/machine-learning/running-nvidia-nemo-2-0-framework-on-amazon-sagemaker-hyperpod/" target="_blank" rel="noopener">
+          <span class="label">Running NVIDIA NeMo 2.0 on Amazon SageMaker HyperPod</span>
+          <span class="note">NeMo training on SageMaker</span>
+        </a>
+        <a class="res" href="https://www.thoughtworks.com/en-us/insights/articles/how-to-build-transaction-foundation-models-in-banking-and-payments" target="_blank" rel="noopener">
+          <span class="label">How to Build Transaction Foundation Models — ThoughtWorks</span>
+          <span class="note">End-to-end walkthrough</span>
+        </a>
+        <a class="res" href="https://arxiv.org/abs/2604.08649" target="_blank" rel="noopener">
+          <span class="label">PRAGMA: Revolut Foundation Model (arXiv)</span>
+          <span class="note">The reference paper</span>
+        </a>
+        <a class="res" href="https://www.algoan.com/en/blog/customer-story-revolut" target="_blank" rel="noopener">
+          <span class="label">Algoan + Revolut Case Study</span>
+          <span class="note">Open Banking in real-time lending</span>
+        </a>
+        <a class="res" href="https://tiny.amazon.com/pvroym49/builawscont3JMcthef" target="_blank" rel="noopener">
+          <span class="label">AWS Fast Path — Article 1</span>
+          <span class="note">Cut loan decisions from days to minutes</span>
+        </a>
+        <a class="res" href="https://tiny.amazon.com/ewz2bmm2/builawscont3JMethef" target="_blank" rel="noopener">
+          <span class="label">AWS Fast Path, Built — Article 2</span>
+          <span class="note">The reference architecture</span>
+        </a>
+    </section>
+    <section class="card">
+      <h2>AWS Services</h2>
+      
+        <a class="res" href="https://aws.amazon.com/bedrock/agentcore/" target="_blank" rel="noopener">
+          <span class="label">Amazon Bedrock AgentCore</span>
+          <span class="note">Harness · Policy · Identity · Optimization</span>
+        </a>
+        <a class="res" href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html" target="_blank" rel="noopener">
+          <span class="label">AWS Step Functions — Callback / Task Token</span>
+          <span class="note">Human-in-the-loop pause</span>
+        </a>
+        <a class="res" href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-bedrockagentcore.html" target="_blank" rel="noopener">
+          <span class="label">Invoke AgentCore Harness with Step Functions</span>
+          <span class="note">The native integration</span>
+        </a>
+        <a class="res" href="https://aws.amazon.com/blogs/machine-learning/context-intelligence-for-your-data-and-ai-agents-at-scale/" target="_blank" rel="noopener">
+          <span class="label">AWS Context (in preview)</span>
+          <span class="note">Knowledge graph for agents</span>
+        </a>
+        <a class="res" href="https://docs.aws.amazon.com/sagemaker/latest/dg/xgboost.html" target="_blank" rel="noopener">
+          <span class="label">XGBoost with Amazon SageMaker AI</span>
+          <span class="note">The Phase 1 signal engine</span>
+        </a>
+        <a class="res" href="https://aws.amazon.com/sagemaker/" target="_blank" rel="noopener">
+          <span class="label">Amazon SageMaker AI</span>
+          <span class="note">Managed ML platform</span>
+        </a>
+        <a class="res" href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html" target="_blank" rel="noopener">
+          <span class="label">Amazon S3 Object Lock</span>
+          <span class="note">Write-once audit storage</span>
+        </a>
+        <a class="res" href="https://docs.aws.amazon.com/audit-manager/latest/userguide/logging-using-cloudtrail.html" target="_blank" rel="noopener">
+          <span class="label">Logging Audit Manager with CloudTrail</span>
+          <span class="note">Compliance audit trail</span>
+        </a>
+    </section>
+    <section class="card">
+      <h2>Tools</h2>
+      
+        <a class="res" href="https://kiro.dev/docs/specs/" target="_blank" rel="noopener">
+          <span class="label">Kiro — Specs (spec-first development)</span>
+          <span class="note">Requirement to design to code</span>
+        </a>
+        <a class="res" href="https://kiro.dev/blog/kiro-and-the-future-of-software-development/" target="_blank" rel="noopener">
+          <span class="label">Kiro &amp; the Future of Spec-Driven Development</span>
+          <span class="note">The why</span>
+        </a>
+        <a class="res" href="https://aws.amazon.com/blogs/machine-learning/running-nvidia-nemo-2-0-framework-on-amazon-sagemaker-hyperpod/" target="_blank" rel="noopener">
+          <span class="label">NVIDIA NeMo AutoModel</span>
+          <span class="note">Phase 2 TFM training</span>
+        </a>
+        <a class="res" href="https://docs.aws.amazon.com/cdk/v2/guide/home.html" target="_blank" rel="noopener">
+          <span class="label">AWS CDK (TypeScript)</span>
+          <span class="note">Infrastructure as code</span>
+        </a>
+    </section>
+    <section class="card">
+      <h2>Contacts</h2>
+      
+        <a class="res" href="https://linkedin.com/in/mihirdesaiaws" target="_blank" rel="noopener">
+          <span class="label">Mihir Desai — LinkedIn</span>
+          <span class="note">Presenter</span>
+        </a>
+        <a class="res" href="https://linkedin.com/in/faris-haddad-cloudsme/" target="_blank" rel="noopener">
+          <span class="label">Faris Haddad — LinkedIn</span>
+          <span class="note">Original author</span>
+        </a>
+    </section></div>
+  </div>
+  <footer>Mihir Desai, Principal Solutions Architect, AWS · Samriddhi 2026</footer>
+</body>
+</html>
